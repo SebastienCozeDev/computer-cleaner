@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using ComputerCleaner.Utils;
+using System.Threading;
 
 namespace ComputerCleaner
 {
@@ -23,6 +24,18 @@ namespace ComputerCleaner
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// URL pour obtenir la dernière annonce.
+        /// </summary>
+        private const string URL_FOR_NEWS = "https://computercleaner.sebastiencoze.repl.co/news.txt";
+
+        /// <summary>
+        /// URL pour obtenir la dernière version.
+        /// </summary>
+        private const string URL_FOR_VERSION = "https://computercleaner.sebastiencoze.repl.co/version.txt";
+
+        private const string VERSION = "v.1.0.0";
+
         /// <summary>
         /// Informations du répertoire temporaire de Windows.
         /// </summary>
@@ -41,20 +54,49 @@ namespace ComputerCleaner
             InitializeComponent();
             winTemp = new DirectoryInfo(@"C:\Windows\Temp");
             appTemp = new DirectoryInfo(System.IO.Path.GetTempPath());
+            coyrightLabel.Content = "Copyright " + VERSION + " " + DateTime.Today.Year + " - Coze Sébastien";
+            string newsContent = News.CheckNews(URL_FOR_NEWS);
+            if (newsContent != String.Empty)
+            {
+                news.Content= newsContent;
+                news.Visibility = Visibility.Visible;
+                newsRectangle.Visibility = Visibility.Visible;
+            }
         }
 
         private void UpdateButtonClick(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Votre version du logiciel est à jour.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
-            LogManager.AddInLog("Information", "Your software version is up to date.");
+            string newVersionContent = News.CheckNews(URL_FOR_VERSION);
+            if (newVersionContent != VERSION && newVersionContent != String.Empty)
+            {
+                MessageBox.Show("Une mise à jour est disponible : " + newVersionContent, "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+                LogManager.AddInLog("Information", "Your software version is not up to date.");
+                try
+                {
+                    Process.Start(new ProcessStartInfo("https://sebastiencozedev.github.io/e-portfolio/")
+                    {
+                        UseShellExecute = true,
+                    });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erreur : " + ex.Message, "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
+                    LogManager.AddInLog("Error", ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Votre version du logiciel est à jour.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+                LogManager.AddInLog("Information", "Your software version is up to date.");
+            }
         }
 
         private void CleanButtonClick(object sender, RoutedEventArgs e)
         {
             string content = "NETTOYER";
-            LogManager.AddInLog("Information", "Cleaning in progress...");
             cleanButton.IsEnabled = false;
             cleanButton.Content = "Nettoyage en cours...";
+            LogManager.AddInLog("Information", "Cleaning in progress...");
             Clipboard.Clear();
             try
             {
