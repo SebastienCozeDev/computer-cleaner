@@ -14,13 +14,15 @@
         </Grid.ColumnDefinitions>
         <Rectangle HorizontalAlignment="Left" Height="175" VerticalAlignment="Top" Width="990" Grid.ColumnSpan="2" Fill="#FF0077B6"/>
         <!-- TITRE -->
-        <Label Content="Analyse de l'ordinateur nécessaire" HorizontalAlignment="Left" Margin="166,32,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" FontWeight="Bold"/>
+        <Label x:Name="title" Content="Analyse de l'ordinateur nécessaire" HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="40" FontWeight="Bold"/>
         <!-- SOUS-TITRES D'INFORMATION -->
-        <Label Content="Espace à nettoyer : " HorizontalAlignment="Left" Margin="225,93,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
-        <Label Content="Dernière analyse : " HorizontalAlignment="Left" Margin="225,128,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Espace à nettoyer : " HorizontalAlignment="Left" Margin="80,71,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
+        <Label Content="Dernière analyse : " HorizontalAlignment="Left" Margin="86,111,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold"/>
         <!-- INFORMATIONS -->
-        <Label Content="Jamais" HorizontalAlignment="Left" Margin="500,128,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22"/>
-        <Label Content="??? Mb" HorizontalAlignment="Left" Margin="500,93,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22"/>
+        <Label x:Name="date" Content="Jamais" HorizontalAlignment="Left" Margin="415,111,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22"/>
+        <Label x:Name="space" Content="??? Mb" HorizontalAlignment="Left" Margin="411,71,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22"/>
+        <Button Content="ANALYSER" HorizontalAlignment="Left" Margin="752,48,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="80" Width="190" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="64" VerticalAlignment="Top" Width="990" Grid.ColumnSpan="2" Fill="#FFF9F9F9" Margin="0,175,0,0"/>
 
     </Grid>
 </Window>
