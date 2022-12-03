@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ugv+Yj/Bw+kO3r93Z9/k0ZluGQKDda1Nhm/iXu6MCi+827lDz17Q9qXmepoMSrgZ5ESLEPrENlgaGwpQgugaDQ==",
+  "dgSpecHash": "ZAyiKSE505tBbZFJP2NiOupOBl0/XbWdO2wrSKBTSqz0p9aDEATwAqsgZZ+bWlU4UIabP6fZoew/62fCVKIxrA==",
   "success": true,
   "projectFilePath": "D:\\Users\\sebas\\vs-workspace\\ComputerCleaner\\ComputerCleaner\\ComputerCleaner.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sebas\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.17763.27\\microsoft.windows.sdk.net.ref.10.0.17763.27.nupkg.sha512"
+  ],
   "logs": []
 }
