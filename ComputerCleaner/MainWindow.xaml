@@ -20,13 +20,13 @@
         <Label Content="Espace à nettoyer : " HorizontalAlignment="Left" Margin="80,71,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold" Height="35" Width="218"/>
         <Label Content="Dernière analyse : " HorizontalAlignment="Left" Margin="86,111,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" FontWeight="Bold" Height="35" Width="206"/>
         <!-- Informations -->
-        <Label x:Name="date" Content="Jamais" HorizontalAlignment="Left" Margin="415,111,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" Height="35" Width="80"/>
-        <Label x:Name="space" Content="??? Mb" HorizontalAlignment="Left" Margin="411,71,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" Height="35" Width="83"/>
-        <Button Content="ANALYSER" HorizontalAlignment="Left" Margin="752,48,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="80" Width="190" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold"/>
+        <Label x:Name="date" Content="Jamais" HorizontalAlignment="Left" Margin="328,111,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" Height="35" Width="172"/>
+        <Label x:Name="space" Content="0 Mb" HorizontalAlignment="Left" Margin="328,71,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial" FontSize="22" Height="35" Width="172"/>
+        <Button Content="ANALYSER" HorizontalAlignment="Left" Margin="752,48,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="80" Width="190" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" Click="AnalyzeButtonClick"/>
 
         <!-- CONTENT -->
         <!-- Boutons -->
-        <Button Content="NETTOYER" HorizontalAlignment="Left" Margin="62,227,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" Click="CleanButtonClick"/>
+        <Button x:Name="cleanButton" Content="NETTOYER" HorizontalAlignment="Left" Margin="62,227,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" Click="CleanButtonClick"/>
         <Button Content="HISTORIQUE" HorizontalAlignment="Right" Margin="502,227,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" Click="HistoryButtonClick"/>
         <Button Content="MISE À JOUR" HorizontalAlignment="Left" Margin="62,381,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" Click="UpdateButtonClick"/>
         <Button Content="SITE WEB" HorizontalAlignment="Right" Margin="502,381,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" Click="WebsiteButtonClick"/>

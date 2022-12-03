@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace ComputerCleaner
+namespace ComputerCleaner.Utils
 {
     /// <summary>
     /// Classe gérant les logs.
