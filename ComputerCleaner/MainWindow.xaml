@@ -26,10 +26,10 @@
 
         <!-- CONTENT -->
         <!-- Boutons -->
-        <Button Content="NETTOYER" HorizontalAlignment="Left" Margin="62,227,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold"/>
-        <Button Content="HISTORIQUE" HorizontalAlignment="Right" Margin="502,227,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold"/>
-        <Button Content="MISE À JOUR" HorizontalAlignment="Left" Margin="62,381,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold"/>
-        <Button Content="SITE WEB" HorizontalAlignment="Right" Margin="502,381,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold"/>
+        <Button Content="NETTOYER" HorizontalAlignment="Left" Margin="62,227,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" Click="CleanButtonClick"/>
+        <Button Content="HISTORIQUE" HorizontalAlignment="Right" Margin="502,227,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" Click="HistoryButtonClick"/>
+        <Button Content="MISE À JOUR" HorizontalAlignment="Left" Margin="62,381,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" Click="UpdateButtonClick"/>
+        <Button Content="SITE WEB" HorizontalAlignment="Right" Margin="502,381,0,0" VerticalAlignment="Top" Height="100" Width="380" BorderThickness="5,5,5,5" Background="#FF0077B6" Foreground="White" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" Click="WebsiteButtonClick"/>
         <!-- Images -->
         <Image Margin="575,406,0,0" Source="/icos/website.png" Stretch="Fill" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="6"/>
         <Image Margin="100,252,0,0" Source="/icos/cleaner.png" Stretch="Fill" Width="50" Height="50" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="6"/>
