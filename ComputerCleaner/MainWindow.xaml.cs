@@ -67,6 +67,7 @@ namespace ComputerCleaner
                 news.Visibility = Visibility.Visible;
                 newsRectangle.Visibility = Visibility.Visible;
             }
+            date.Content = Save.GetLastDateAnalysis();
         }
 
         private void UpdateButtonClick(object sender, RoutedEventArgs e)
@@ -167,8 +168,8 @@ namespace ComputerCleaner
                 LogManager.AddInLog("Error", ex.Message);
             }
             space.Content = totalSize + " Mb";
-            date.Content = DateTime.Today;
-            Save.SaveLastDateAnalysis(DateTime.Today);
+            Save.SaveLastDateAnalysis(DateTime.Now.ToString());
+            date.Content =  Save.GetLastDateAnalysis();
             title.Content = "Analyse effectué";
         }
     }
