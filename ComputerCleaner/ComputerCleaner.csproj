@@ -8,12 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Cleaner.png" />
+    <None Remove="cleaner.png" />
+    <None Remove="website.png" />
+    <None Remove="window_ico.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="cleaner.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Resource Include="icos\cleaner.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icos\history.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icos\update.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icos\website.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="icos\window_ico.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
 
