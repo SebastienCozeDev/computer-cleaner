@@ -34,6 +34,11 @@ namespace ComputerCleaner
         /// </summary>
         private const string URL_FOR_VERSION = "https://computercleaner.sebastiencoze.repl.co/version.txt";
 
+        /// <summary>
+        /// URL du site web.
+        /// </summary>
+        private const string URL_WEBSITE = "https://sebastiencozedev.github.io/e-portfolio/";
+
         private const string VERSION = "v.1.0.0";
 
         /// <summary>
@@ -73,7 +78,7 @@ namespace ComputerCleaner
                 LogManager.AddInLog("Information", "Your software version is not up to date.");
                 try
                 {
-                    Process.Start(new ProcessStartInfo("https://sebastiencozedev.github.io/e-portfolio/")
+                    Process.Start(new ProcessStartInfo(URL_WEBSITE)
                     {
                         UseShellExecute = true,
                     });
@@ -130,7 +135,7 @@ namespace ComputerCleaner
         {
             try
             {
-                Process.Start(new ProcessStartInfo("https://sebastiencozedev.github.io/e-portfolio/")
+                Process.Start(new ProcessStartInfo(URL_WEBSITE)
                 {
                     UseShellExecute = true,
                 });
@@ -163,6 +168,7 @@ namespace ComputerCleaner
             }
             space.Content = totalSize + " Mb";
             date.Content = DateTime.Today;
+            Save.SaveLastDateAnalysis(DateTime.Today);
             title.Content = "Analyse effectué";
         }
     }
