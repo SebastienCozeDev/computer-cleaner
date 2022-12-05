@@ -2,9 +2,9 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Computer Cleaner"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.0.1"
 #define MyAppPublisher "Sébastien Coze"
-#define MyAppURL "https://sebastiencozedev.github.io/e-portfolio/"
+#define MyAppURL "https://sebastiencozedev.github.io/e-portfolio/projets/computer-cleaner/"
 #define MyAppExeName "ComputerCleaner.exe"
 
 [Setup]
@@ -42,7 +42,6 @@ Source: "D:\Users\sebas\vs-workspace\ComputerCleaner\ComputerCleaner\bin\Release
 Source: "D:\Users\sebas\vs-workspace\ComputerCleaner\ComputerCleaner\bin\Release\net6.0-windows10.0.17763.0\ComputerCleaner.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Users\sebas\vs-workspace\ComputerCleaner\ComputerCleaner\bin\Release\net6.0-windows10.0.17763.0\ComputerCleaner.pdb"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Users\sebas\vs-workspace\ComputerCleaner\ComputerCleaner\bin\Release\net6.0-windows10.0.17763.0\ComputerCleaner.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
-Source: "D:\Users\sebas\vs-workspace\ComputerCleaner\ComputerCleaner\bin\Release\net6.0-windows10.0.17763.0\date.data"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Users\sebas\vs-workspace\ComputerCleaner\ComputerCleaner\bin\Release\net6.0-windows10.0.17763.0\Microsoft.Windows.SDK.NET.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Users\sebas\vs-workspace\ComputerCleaner\ComputerCleaner\bin\Release\net6.0-windows10.0.17763.0\WinRT.Runtime.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files

@@ -4,7 +4,13 @@ Computer Cleaner est un logiciel de nettoyage réalisé en `C#` avec le framewor
 
 ## Installation
 
-[Computer Cleaner - Installer.exe](Computer%20Cleaner%20-%20Installer.exe) est l'installateur du logiciel. Il a été conçu grâce au script [inno-setup-script.iss](inno-setup-script.iss) et à son [logiciel associé](https://jrsoftware.org/).
+[Computer Cleaner - Installer.exe](Installers/Computer%20Cleaner%20-%20Installer%20-%20v.1.0.1.exe) est l'installateur du logiciel. Il a été conçu grâce au script [inno-setup-script.iss](inno-setup-script.iss) et à son [logiciel associé](https://jrsoftware.org/).
+
+### Versions
+
+- [v.1.0.1](Installers/Computer%20Cleaner%20-%20Installer%20-%20v.1.0.1.exe)
+    - Modification du lien pour le site.
+- [v.1.0.0](Installers/Computer%20Cleaner%20-%20Installer%20-%20v.1.0.0.exe)
 
 ## Fonctionnalités
 
