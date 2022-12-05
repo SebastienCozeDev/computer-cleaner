@@ -38,7 +38,7 @@ namespace ComputerCleaner
         /// <summary>
         /// URL du site web.
         /// </summary>
-        private const string URL_WEBSITE = "https://sebastiencozedev.github.io/e-portfolio/";
+        private const string URL_WEBSITE = "https://sebastiencozedev.github.io/e-portfolio/projets/computer-cleaner/";
 
         private const string VERSION = "v.1.0.1";
 

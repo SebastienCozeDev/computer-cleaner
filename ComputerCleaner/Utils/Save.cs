@@ -31,16 +31,23 @@ namespace ComputerCleaner.Utils
         /// <summary>
         /// Obtenir la date de la dernière analyse.
         /// </summary>
-        /// <param name="dateTime"></param>
-        /// <returns></returns>
+        /// <returns>La date de la dernière analyse.</returns>
         public static string GetLastDateAnalysis()
         {
-            string date =  File.ReadAllText(DATE_FILE);
-            if (string.IsNullOrEmpty(date))
+            try
             {
+                string date =  File.ReadAllText(DATE_FILE);
+                if (string.IsNullOrEmpty(date))
+                {
+                    return "Jamais";
+                }
+                return date;
+            }
+            catch (FileNotFoundException ex)
+            {
+                LogManager.AddInLog("Error", ex.Message);
                 return "Jamais";
             }
-            return date;
         }
     }
 }
