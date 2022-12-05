@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using System.IO;
 using ComputerCleaner.Utils;
 using System.Threading;
+using System.Windows.Media.Effects;
 
 namespace ComputerCleaner
 {
@@ -39,7 +40,7 @@ namespace ComputerCleaner
         /// </summary>
         private const string URL_WEBSITE = "https://sebastiencozedev.github.io/e-portfolio/";
 
-        private const string VERSION = "v.1.0.0";
+        private const string VERSION = "v.1.0.1";
 
         /// <summary>
         /// Informations du répertoire temporaire de Windows.
@@ -70,6 +71,11 @@ namespace ComputerCleaner
             date.Content = Save.GetLastDateAnalysis();
         }
 
+        /// <summary>
+        /// Cette méthode est appelé quand l'utilisateur clique sur le bouton de mise à jour.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UpdateButtonClick(object sender, RoutedEventArgs e)
         {
             string newVersionContent = News.CheckNews(URL_FOR_VERSION);
@@ -97,6 +103,11 @@ namespace ComputerCleaner
             }
         }
 
+        /// <summary>
+        /// Cette méthode est appelé quand l'utilisateur clique sur le bouton de nettoyage.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CleanButtonClick(object sender, RoutedEventArgs e)
         {
             string content = "NETTOYER";
@@ -126,12 +137,22 @@ namespace ComputerCleaner
             space.Content = "0 Mb";
         }
 
+        /// <summary>
+        /// Cette méthode est appelé quand l'utilisateur clique sur le bouton de l'historique.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HistoryButtonClick(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Cette fonctionnalité n'est pas disponible pour cette version du logiciel.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
             LogManager.AddInLog("Information", "This feature is not available for this version of the software.");
         }
 
+        /// <summary>
+        /// Cette méthode est appelé quand l'utilisateur clique sur le bouton pour accéder au site web.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WebsiteButtonClick(object sender, RoutedEventArgs e)
         {
             try
@@ -147,11 +168,19 @@ namespace ComputerCleaner
             }
         }
 
+        /// <summary>
+        /// Cette méthode est appelé quand l'utilisateur clique sur le bouton d'analyse.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AnalyzeButtonClick(object sender, RoutedEventArgs e)
         {
             AnalyseFolder();
         }
 
+        /// <summary>
+        /// Analyser les dossiers.
+        /// </summary>
         private void AnalyseFolder()
         {
             Console.WriteLine("Start of analysis");
@@ -170,7 +199,7 @@ namespace ComputerCleaner
             space.Content = totalSize + " Mb";
             Save.SaveLastDateAnalysis(DateTime.Now.ToString());
             date.Content =  Save.GetLastDateAnalysis();
-            title.Content = "Analyse effectué";
+            title.Content = "Analyse effectuée";
         }
     }
 }
